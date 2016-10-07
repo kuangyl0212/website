@@ -3,3 +3,8 @@
 /client/static/output
 
 npm-debug.log
+
+*-compiled.js
+*-compiled.js.map
+
+/.idea

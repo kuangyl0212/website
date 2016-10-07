@@ -10,6 +10,12 @@ app.get('/', function (req, res) {
     res.render('index');
 });
 
+app.get('/data/:module', function (req, res, next) {
+    var c_path = req.params.module;
+    var Action = require('./server/action/data/' + c_path);
+    Action.execute(req, res);
+});
+
 // 设置views路径和模板
 app.set('views', './client/view');
 app.set('view engine', 'html');
