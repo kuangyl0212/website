@@ -70,7 +70,7 @@ app.engine('html', ejs.renderFile);
 app.use('/client/static', express.static(path.join(__dirname, 'client/static')));
 
 // 启动一个服务，监听从8888端口进入的所有连接请求
-var server = app.listen(8888, function(){
+var server = app.listen(80, function(){
     var host = server.address().address;
     var port = server.address().port;
     console.log('Listening at http://%s:%s', host, port);
