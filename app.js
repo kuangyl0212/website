@@ -43,6 +43,7 @@ app.get('/data/:module', function (req, res, next) {
 
 app.post('/reg',function (req,res) {
     console.log('post /reg',req.body);
+    res.send('post /reg');
 
     /*
     * 可以成功写入数据库 但是post的数据拿不到

@@ -5,7 +5,7 @@ class Navi extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: ['首页','关于','登录','注册']
+            data: ['首页','分类','关于','登录','注册']
         }
     }
     clickHandler(event) {
@@ -56,6 +56,10 @@ var naviHeight = '50px';
 var styles = {
     navi: {
         // background: '#666',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        paddingLeft: '6%',
         height: naviHeight,
         // borderBottom: '1px solid #ccc',
         position: 'fixed',
@@ -67,8 +71,9 @@ var styles = {
     naviItem: {
         lineHeight: naviHeight,
         fontFamily: 'Microsoft Yahei',
-        marginLeft: '20px',
-        marginRight: '20px',
+        marginLeft: '3%',
+        marginRight: '3%',
+        verticalAlign: 'middle',
         color: '#666'
     },
 };
