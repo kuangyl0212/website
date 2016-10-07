@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/server/data/Message-compiled.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/server/data/Message-compiled.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
