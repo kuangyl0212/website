@@ -2,7 +2,7 @@
 
 /client/static/output
 
-npm-debug.log
+*-debug.log*
 
 *-compiled.js
 *-compiled.js.map
