@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "nodemon app.js",
+    "build": "webpack --watch"
   },
   "author": "Ruling",
   "license": "ISC",
@@ -18,9 +19,15 @@
     "ejs": "^2.5.2",
     "express": "^4.14.0",
     "jsx-loader": "^0.13.2",
+    "nodemon": "^1.11.0",
+    "normalize.css": "^5.0.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.16.0",
+    "react-hot-loader": "^3.0.0-beta.5"
   }
 }

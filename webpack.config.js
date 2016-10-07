@@ -37,5 +37,6 @@ module.exports = {
                 comments: false,
             },
         }),
+        new webpack.HotModuleReplacementPlugin(),
     ]
 }

@@ -1,12 +1,17 @@
 'use strict';
 var React = require('react');
 var ReactDOM = require('react-dom');
+
+var Navi = require('../../components/Navi');
+
 var App = React.createClass({
     render: function () {
         return (
-            <h2>网站建设中...</h2>
+            <div>
+               <Navi />
+            </div>
         )
     }
-})
+});
 // Render the main component into the dom
 ReactDOM.render(<App />, document.getElementById('app'));
