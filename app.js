@@ -43,22 +43,26 @@ app.get('/data/:module', function (req, res, next) {
 
 app.post('/reg',function (req,res) {
     console.log('post /reg',req.body);
-    var query = req.body;
-    var _user={
-        username: 'test1',
-        password: 'test1',
-    };
-    var user=new User(_user);
-    user.save(function(err,user){
-        if (err) {
-            console.log(err);
-            res.send('error===>',err);
-        }
-        console.log('注册成功');
-        res.send('注册成功');
-    }).catch(function (err) {
-        console.log('error',err);
-    })
+
+    /*
+    * 可以成功写入数据库 但是post的数据拿不到
+    */
+    // var data = req.body;
+    // var _user={
+    //     username: data.usename,
+    //     password: data.password,
+    // };
+    // var user=new User(_user);
+    // user.save(function(err,user){
+    //     if (err) {
+    //         console.log(err);
+    //         res.send('error===>',err);
+    //     }
+    //     console.log('注册成功');
+    //     res.send('注册成功');
+    // }).catch(function (err) {
+    //     console.log('error',err);
+    // })
 });
 
 // 设置views路径和模板
