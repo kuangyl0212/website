@@ -5,11 +5,12 @@ class Navi extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: ['首页','关于','注册']
+            data: ['首页','关于','登录','注册']
         }
     }
     clickHandler(event) {
         console.log('value',event.target.textContent);
+        alert('Press--->' + event.target.textContent);
         // alert('hi');
         switch (event.target.textContent) {
             case '注册':
@@ -56,16 +57,18 @@ var styles = {
     navi: {
         // background: '#666',
         height: naviHeight,
-        borderBottom: '1px solid #ccc',
+        // borderBottom: '1px solid #ccc',
         position: 'fixed',
         top: 0,
         width: '100%',
+        textAlign: 'center',
+        boxShadow: '0 1px 3px #ccc',
     },
     naviItem: {
         lineHeight: naviHeight,
         fontFamily: 'Microsoft Yahei',
-        marginLeft: '5px',
-        marginRight: '5px',
+        marginLeft: '20px',
+        marginRight: '20px',
         color: '#666'
     },
 };
