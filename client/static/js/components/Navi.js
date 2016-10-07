@@ -5,12 +5,35 @@ class Navi extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: ['首页','关于']
+            data: ['首页','关于','注册']
         }
     }
-    clickHandler() {
-        alert('hi');
-        console.log('click');
+    clickHandler(event) {
+        console.log('value',event.target.textContent);
+        // alert('hi');
+        switch (event.target.textContent) {
+            case '注册':
+                console.log('click-reg');
+                var payload = {
+                    usename: 'test',
+                    password: 12345,
+                };
+
+                var data = new FormData();
+                data.append( "json", JSON.stringify( payload ) );
+
+                fetch("/reg",
+                    {
+                        method: "POST",
+                        headers: {
+                            'Accept': 'application/json, text/plain, */*',
+                            'Content-Type': 'x-www-form-urlencoded'
+                        },
+                        body: data
+                    })
+                    .then(function(res){ console.log('res',res) })
+                    .catch(function(err){console.log('error',err)})
+        }
     }
     render() {
         console.log('render navi');
